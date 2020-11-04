@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity sumador1bcd is 
+	port(
+	a : in std_logic_vector(3 downto 0);
+	b : in std_logic_vector(3 downto 0);
+	s_final : out std_logic_vector(3 downto 0);
+	c_out : out std_logic);
+end sumador1bcd;
+
+architecture structural of sumador1bcd is
+	signal c : std_logic_vector(4 downto 0);
+	signal s : std_logic_vector(3 downto 0);
+	component sumador4bits
+		port(
+		a : in std_logic_vector(3 downto 0);
+		b : in std_logic_vector(3 downto 0);
+		s : out std_logic_vector(3 downto 0);
+		c_out : out std_logic);
+	end component;
+	
+begin
+	
+	i_sumador4bits : sumador4bits
+	port map(
+	
+	)
+	
+	
+	
+	
